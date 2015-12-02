@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   get '/splat' do
 
       @item = ItemsModel.all
-      erb :Splat_index
+      erb :splat_index
 
   end
 
@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
     @item.name = params[:name]
     @item.quantity = params[:quantity]
 
-    erb :students_create
+    erb :splat_create
 
   end
 
