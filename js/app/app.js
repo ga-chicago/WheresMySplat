@@ -2,6 +2,9 @@
 var app = app || {};
 window.onload = function() {
 
+  // comment out for prod
+  console.log('application loaded');
+
   class Model {
     constructor(properties) {
       this.properties = properties;
