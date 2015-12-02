@@ -4,11 +4,11 @@
   <input type="hidden" name="id" value='<%= @item.id %>'>
   <input type="text" name="name" value='<%= @item.name %>'>
   <input type="text" name="quantity" value='<%= @item.quantity %>'>
-  <button type="submit">Edit Item</button>
+  <input type="submit">Edit Item</input>
 
 </form>
 
 <form action="/splat/delete" method="post">
   <input type="hidden" name="id" value='<%= @item.id %>'>
-  <button type="submit" name="button"></button>
+  <input type="submit" value="submit">Submit</input>
 </form>
