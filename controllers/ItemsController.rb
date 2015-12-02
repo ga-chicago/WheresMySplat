@@ -8,9 +8,10 @@ class ItemsController < ApplicationController
 
   get '/splat/create' do
 
-    @items = ItemsModel.new
+    @item = ItemsModel.new
 
-    @items.name = params[:name]
+    @item.name = params[:name]
+    @item.quantity = params[:quantity]
 
     erb :students_create
 
@@ -19,37 +20,37 @@ class ItemsController < ApplicationController
   get '/splat/edit/:id' do
 
     @id = params[id]
-    @items = ItemModel.find(@id)
+    @item = ItemModel.find(@id)
 
     erb :splat_edit
   end
 
   post '/splat/create' do
 
-    @items = ItemsModel.new
+    @item = ItemsModel.new
 
-    @items.name = params[:name]
-    @items.quantity = params[:quantity]
+    @item.name = params[:name]
+    @item.quantity = params[:quantity]
 
     erb :splat_create_success
   end
 
   post '/splat/edit' do
 
-    @items = ItemsModel.find(params[:id])
-    @items.name = params[:name]
-    @items.quantity = params[:quantity]
-    @items.save
+    @item = ItemsModel.find(params[:id])
+    @item.name = params[:name]
+    @item.quantity = params[:quantity]
+    @item.save
 
     erb :splat_edit_success
 
   end
 
-  post '/delete' do
+  post '/splat/delete' do
 
     @id = params[:id]
-    @items = ItemsModel.find(@id)
-    @items.destroy
+    @item = ItemsModel.find(@id)
+    @item.destroy
 
     erb :splat_delete_success
   end

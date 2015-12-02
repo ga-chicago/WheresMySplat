@@ -1,14 +1,14 @@
-<h1>Edit Student of ID <%= @student.id %></h1>
+<h1>Edit item with the name of <%= @item.name %></h1>
 
-<form action="/students/edit" method="post">
-  <input type="hidden" name="id" value='<%= @student.id %>'>
-  <input type="text" name="name" value='<%= @student.name %>'>
-  <input type="text" name="email" value='<%= @student.email %>'>
-  <input type="submit" value="Edit Student">
+<form action="/splat/edit" method="post">
+  <input type="hidden" name="id" value='<%= @item.id %>'>
+  <input type="text" name="name" value='<%= @item.name %>'>
+  <input type="text" name="quantity" value='<%= @item.quantity %>'>
+  <button type="submit">Edit Item</button>
 
 </form>
 
-<form action="/students/delete" method="post">
-  <input type="hidden" name="id" value='<%= @student.id %>'>
-  <input type="submit" value="Delete Student">
+<form action="/splat/delete" method="post">
+  <input type="hidden" name="id" value='<%= @item.id %>'>
+  <button type="submit" name="button"></button>
 </form>

@@ -1,6 +1,6 @@
-<h1>Students List</h1>
+<h1>Item List</h1>
 
-<li><a href='/students/create'>Create Student</a></li>
+<li><a href='/splat/create'>Create item</a></li>
 
 <table>
   <thead>
@@ -11,7 +11,7 @@
       Name
     </th>
     <th>
-      Email
+      quantity
     </th>
     <th>
       Edit?
@@ -19,19 +19,19 @@
   </thead>
 
   <tbody>
-    <% @students.each do |student| %>
+    <% @items.each do |item| %>
       <tr>
         <td>
-          <%= student.id %>
+          <%= item.id %>
         </td>
         <td>
-          <%= student.name %>
+          <%= item.name %>
         </td>
         <td>
-          <%= student.email %>
+          <%= item.quantity %>
         </td>
         <td>
-          <a href='/students/edit/<%= student.id %>'>Edit</a>
+          <a href='/splat/edit/<%= item.id %>'>Edit</a>
         </td>
       </tr>
     <% end %>
