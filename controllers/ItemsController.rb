@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
 
   get '/splat' do
 
+      @item = ItemsModel.all
       erb :Splat_index
 
   end
