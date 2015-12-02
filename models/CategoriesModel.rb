@@ -1,5 +1,5 @@
 class CategoriesModel < ActiveRecord::Base
-  
-  self.table_name = categories;
+
+  self.table_name = 'categories';
 
 end

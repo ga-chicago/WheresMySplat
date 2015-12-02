@@ -1,5 +1,5 @@
 class ItemModel < AcitveRecord::Base
 
-  self.table = items;
+  self.table = 'items';
 
 end
