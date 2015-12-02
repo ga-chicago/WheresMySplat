@@ -15,9 +15,19 @@ get '/splat/create' do
 
 end
 
-get '/edit/:id' do
+get '/splat/edit/:id' do
 
   @id = params[id]
   @items = ItemModel.find(@id)
 
 end
+
+post '/splat/create' do
+
+  @items = ItemsModel.new
+
+  @items.name = params[:name]
+
+end
+
+post '/splat/edit' do 
