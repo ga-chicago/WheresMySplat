@@ -1,8 +1,5 @@
 class AccountController < ApplicationController
 
-
-  @model = ItemModel
-
   def does_user_exist(username)
     user = UsersModel.find_by(:user_name => username.to_s)
     if user

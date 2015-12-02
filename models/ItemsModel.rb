@@ -1,5 +1,5 @@
-class ItemModel < AcitveRecord::Base
+class ItemsModel < ActiveRecord::Base
 
-  self.table = 'items';
+  self.table_name = 'items';
 
 end
