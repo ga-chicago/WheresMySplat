@@ -1,17 +1,11 @@
 class ItemsController < ApplicationController
 
-
-get '/splat' do
-
+  get '/splat' do
     erb :Splat
+  end
 
-end
-
-get '/splat/create' do
-
-  @items = ItemsModel.new
-
-  @items
-
+  get '/splat/create' do
+    @items = ItemsModel.new
+  end
 
 end
